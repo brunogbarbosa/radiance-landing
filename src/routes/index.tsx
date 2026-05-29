@@ -1,29 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Landing from "@/components/Landing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Dra. Raiane Araújo | Dentista & Implantodontista" },
+      { name: "description", content: "Implantes, lentes em resina, próteses e laminados cerâmicos em Patos de Minas e Vazante — MG. Sorrisos que transformam vidas." },
+      { property: "og:title", content: "Dra. Raiane Araújo | Dentista & Implantodontista" },
+      { property: "og:description", content: "Sorrisos que transformam vidas. Atendimento em Patos de Minas e Vazante — MG." },
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "icon", type: "image/jpeg", href: "/favicon.jpg" },
     ],
   }),
-  component: Index,
+  component: Landing,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
